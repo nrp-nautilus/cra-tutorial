@@ -34,3 +34,27 @@ Everything uses the **`nrp-training-k8s`** namespace and the NRP managed LLM at
 Scan the QR on the right (or open [`https://ucsantacruz.co1.qualtrics.com/jfe/form/SV_3wQP0UrsPXy3nMO?Q_CHL=qr`](https://ucsantacruz.co1.qualtrics.com/jfe/form/SV_3wQP0UrsPXy3nMO?Q_CHL=qr)) to take the **pre-training survey** — a quick set of questions about your prior Kubernetes / NRP / AI experience. Comparing pre- and post-training responses is how we decide what to keep, cut, or rework for future cohorts.
 
 <br clear="right">
+
+## Helpful links
+
+**NRP — start here**
+- [NRP home](https://nrp.ai) · [Documentation](https://nrp.ai/documentation)
+- [Getting started](https://nrp.ai/documentation/userdocs/start/getting-started/) · [New-user introduction](https://nrp.ai/documentation/userdocs/tutorial/introduction) · [Using Nautilus](https://nrp.ai/documentation/userdocs/start/using-nautilus/)
+- [Cluster policies](https://nrp.ai/documentation/userdocs/start/policies/) · [FAQ](https://nrp.ai/documentation/userdocs/start/faq/)
+
+**AI & managed LLMs** (what this tutorial uses)
+- [Managed LLM overview](https://nrp.ai/documentation/userdocs/ai/llm-managed/) · [Available models](https://nrp.ai/documentation/userdocs/ai/llm-managed/models/)
+- [API access](https://nrp.ai/documentation/userdocs/ai/llm-managed/api-access/) · [Client configs](https://nrp.ai/documentation/userdocs/ai/llm-managed/client-configs/) · [LLMs in JupyterHub](https://nrp.ai/documentation/userdocs/ai/llm-jupyterhub/)
+- [Browser chat UI (Open WebUI)](https://nrp-openwebui.nrp-nautilus.io) · [Get an LLM token](https://nrp.ai/llmtoken) · API endpoint: `https://ellm.nrp-nautilus.io/v1`
+
+**Storage**
+- [Storage overview](https://nrp.ai/documentation/userdocs/storage/intro/) · [S3 (Ceph)](https://nrp.ai/documentation/userdocs/storage/ceph-s3/) · [Moving data](https://nrp.ai/documentation/userdocs/storage/move-data/)
+
+**Dashboards & status**
+- [Nautilus portal / dashboard](https://dash.nrp-nautilus.io) · [Cluster resources](https://nrp.ai/viz/resources) · [Usage & accounting (Grafana)](https://grafana.nrp-nautilus.io)
+
+**Support & community**
+- [Support](https://nrp.ai/documentation/userdocs/start/support/) · [Contact](https://nrp.ai/contact) · [Matrix / Element chat](https://element.nrp-nautilus.io/)
+
+**Tools used here**
+- [`opencode`](https://opencode.ai) (agentic CLI) · [Ollama](https://ollama.com) (local LLM serving)
