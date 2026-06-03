@@ -36,9 +36,9 @@ cat > ~/.config/opencode/opencode.json <<'JSON'
         "apiKey": "{env:OPENAI_API_KEY}"
       },
       "models": {
-        "gpt-oss": { "name": "GPT-OSS" },
-        "qwen3":   { "name": "Qwen3"   },
-        "gemma":   { "name": "Gemma"   }
+        "gpt-oss":    { "name": "GPT-OSS"    },
+        "qwen3":      { "name": "Qwen3"      },
+        "minimax-m2": { "name": "MiniMax-M2" }
       }
     }
   },
@@ -72,7 +72,7 @@ python fizzbuzz.py
 ```
 
 Switch models in-session with `Ctrl+P → Switch models` and try the same prompt
-against `qwen3` or `gemma` — same agent, same prompt, different inference
+against `qwen3` or `minimax-m2` — same agent, same prompt, different inference
 backend. The teaching point: you bring the workflow you already use; NRP
 supplies the inference.
 

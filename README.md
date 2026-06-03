@@ -1,10 +1,10 @@
 # CRA Tutorial — Hands-on AI on the National Research Platform
 
 A hands-on tour of running AI on [NRP](https://nrp.ai): calling the managed
-LLM, running a local LLM on a session GPU, and building RAG pipelines (a simple
-hand-written corpus and the full NRP documentation) — all **inside a JupyterHub
-session**, no pods or YAML to apply. It ends with a short `opencode` example
-pointing an agentic coding CLI at the same managed LLM.
+LLM, running a local LLM on a session GPU, and building a RAG pipeline over the
+NRP documentation using NRP's managed embedding model — all **inside a
+JupyterHub session**, no pods or YAML to apply. It ends with a short `opencode`
+example pointing an agentic coding CLI at the same managed LLM.
 
 ## Quick Start
 
@@ -20,7 +20,7 @@ The managed-LLM and RAG cells work on a **CPU-only** session; spawn with
 Work through the materials in order:
 
 1. [`1_intro.md`](1_intro.md) — Introduction and Access
-2. [`2_inference.ipynb`](2_inference.ipynb) — Managed LLM → local LLM (Ollama) → RAG with Milvus (simple corpus + NRP docs)
+2. [`2_inference.ipynb`](2_inference.ipynb) — Managed LLM → local LLM (Ollama) → RAG over the NRP docs (managed embeddings, no vector database)
 3. [`3_opencode.md`](3_opencode.md) — Agentic coding with `opencode`
 
 Everything uses the **`nrp-training-k8s`** namespace and the NRP managed LLM at
