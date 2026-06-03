@@ -1,6 +1,6 @@
 # 1. Introduction and Access
 
-This short tutorial runs AI workloads on the
+This tutorial runs AI workloads on the
 [National Research Platform (NRP)](https://nrp.ai) — entirely inside a
 JupyterHub session, with no pods or YAML to apply.
 
