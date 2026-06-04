@@ -6,14 +6,26 @@ first you'll **use** NRP's managed AI services (LLM inference and RAG), then
 you'll **deploy your own** JupyterHub on the cluster with Helm.
 
 ## What NRP is
-
 NRP is a shared national cyberinfrastructure built on the Nautilus Kubernetes
 cluster. It provides hundreds of GPU nodes, shared storage, and managed
 services such as JupyterHub, S3, a vector database (Milvus), and an
 OpenAI-compatible **managed LLM endpoint** — all free for U.S. academic
 research, teaching, and outreach.
 
-A quick mental model:
+- **Scale**
+   - **500+ nodes**
+   - **1400+ GPUs**
+   - **30+ FPGAs**
+
+![NRP](images/dash-us.png)
+<details>
+  <summary>Click to reveal more</summary>
+
+![NRP](images/dash-full.png)
+</details>
+
+
+## A quick mental model:
 
 1. **CILogon** signs you in through your institution's identity provider.
 2. **JupyterHub** gives you a browser-based JupyterLab workspace and terminal.
