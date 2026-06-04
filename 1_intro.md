@@ -1,8 +1,9 @@
 # 1. Introduction and Access
 
-This tutorial runs AI workloads on the
-[National Research Platform (NRP)](https://nrp.ai) — entirely inside a
-JupyterHub session, with no pods or YAML to apply.
+This tutorial runs on the
+[National Research Platform (NRP)](https://nrp.ai) from a JupyterHub session:
+first you'll **use** NRP's managed AI services (LLM inference and RAG), then
+you'll **deploy your own** JupyterHub on the cluster with Helm.
 
 ## What NRP is
 
@@ -39,11 +40,17 @@ kubectl auth can-i list pods -n nrp-training-k8s
 You should see the endpoint URL and a `yes`. That's everything the notebook
 needs.
 
-## Spawning with a GPU (optional)
+## A CPU-only session is enough
 
-The managed-LLM and RAG cells run fine on a **CPU-only** session. Spawn with
-**1 × NVIDIA-A10** only if you also want to run the local-LLM comparison in
-section 3 of the notebook.
+Everything here — managed LLM inference, RAG, and deploying a JupyterHub with
+Helm — runs on a **CPU-only** session. The spawn-form defaults (1 core / 8 GB)
+are fine; you do **not** need a GPU.
+
+## For Part 3: your namespace
+
+Part 3 deploys a JupyterHub into a namespace reserved for you
+(`nrp-training-000` … `nrp-training-099`) — use the one on the slip you were
+handed. Your session's service account can already deploy there.
 
 **Next:** open [`2_inference.ipynb`](2_inference.ipynb) and run the cells top
 to bottom.

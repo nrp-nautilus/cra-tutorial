@@ -1,10 +1,9 @@
 # CRA Tutorial — Hands-on AI on the National Research Platform
 
 A hands-on tour of running AI on [NRP](https://nrp.ai): calling the managed
-LLM, running a local LLM on a session GPU, and building a RAG pipeline over the
-NRP documentation using NRP's managed embedding model — all **inside a
-JupyterHub session**, no pods or YAML to apply. It ends with a short `opencode`
-example pointing an agentic coding CLI at the same managed LLM.
+LLM and building a RAG pipeline over the NRP documentation with NRP's managed
+embedding model — then **deploying your own JupyterHub** on the cluster with
+Helm, and reusing the RAG pattern to query the JupyterHub docs. No GPU required.
 
 ## Quick Start
 
@@ -12,19 +11,19 @@ Open the workspace in the pre-authenticated JupyterLab environment on NRP:
 
 **[Launch CRA Tutorial Workspace](https://training.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fnrp-nautilus%2Fcra-tutorial&branch=main&urlpath=lab%2Ftree%2Fcra-tutorial%2F)**
 
-The managed-LLM and RAG cells work on a **CPU-only** session; spawn with
-**1 × NVIDIA-A10** only if you also want to run the local-LLM comparison.
+A **CPU-only** session is all you need — no GPU.
 
 ## Path
 
 Work through the materials in order:
 
-1. [`1_intro.md`](1_intro.md) — Introduction and Access
-2. [`2_inference.ipynb`](2_inference.ipynb) — Managed LLM → local LLM (Ollama) → RAG over the NRP docs (managed embeddings, no vector database)
-3. [`3_opencode.md`](3_opencode.md) — Agentic coding with `opencode`
+1. [`1_intro.md`](1_intro.md) — Introduction and access
+2. [`2_inference.ipynb`](2_inference.ipynb) — NRP managed LLM → RAG over the NRP docs (managed embeddings, no vector database)
+3. [`3_jupyterhub.ipynb`](3_jupyterhub.ipynb) — Deploy your own JupyterHub with Helm + a bonus RAG over the Zero-to-JupyterHub docs
 
-Everything uses the **`nrp-training-k8s`** namespace and the NRP managed LLM at
-`https://ellm.nrp-nautilus.io/v1`. The session pod already exports
+Parts 1–2 use the **`nrp-training-k8s`** namespace and the NRP managed LLM at
+`https://ellm.nrp-nautilus.io/v1`; Part 3 deploys into your assigned
+`nrp-training-0XX` namespace. The session pod already exports
 `OPENAI_API_BASE` and `OPENAI_API_KEY`.
 
 ## 📋 Pre-training survey — please take 2 minutes before we start
@@ -56,5 +55,6 @@ Scan the QR on the right (or open [`https://ucsantacruz.co1.qualtrics.com/jfe/fo
 **Support & community**
 - [Support](https://nrp.ai/documentation/userdocs/start/support/) · [Contact](https://nrp.ai/contact) · [Matrix / Element chat](https://element.nrp-nautilus.io/)
 
-**Tools used here**
-- [`opencode`](https://opencode.ai) (agentic CLI) · [Ollama](https://ollama.com) (local LLM serving)
+**JupyterHub on NRP** (Part 3)
+- [Deploy JupyterHub](https://nrp.ai/documentation/userdocs/jupyter/jupyterhub/) · [JupyterHub service](https://nrp.ai/documentation/userdocs/jupyter/jupyterhub-service/) · [Persistent storage](https://nrp.ai/documentation/userdocs/storage/ceph/)
+- [Zero-to-JupyterHub docs](https://z2jh.jupyter.org/en/stable/) · [Helm](https://helm.sh/) · [7NRP custom-hub guide](https://github.com/nrp-nautilus/7nrp/tree/main/3_custom_jupyterhubs_classroom_research)
