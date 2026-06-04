@@ -51,6 +51,8 @@ singleuser:
   startTimeout: 600
   cpu:    {limit: 3, guarantee: 1}
   memory: {limit: 8G, guarantee: 2G}
+  cloudMetadata:
+    blockWithIptables: false
   networkPolicy:
     enabled: false
   storage:
