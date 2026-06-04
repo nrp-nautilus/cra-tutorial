@@ -21,6 +21,13 @@ A quick mental model:
 4. **Managed services** (LLM, Milvus, …) mean you call an API instead of
    running and paying for your own servers.
 
+## NAIRR Classroom Provider
+- Provides a Jupyter platform for your classroom
+- Access to NRP Resources (CPU, A10 GPU, storage, LLMs,...)
+![NAIRR1](images/NAIRR_Classroom_1.png)
+---
+![NAIRR2](images/NAIRR_Classroom_2.png)
+
 ## Interacting with NRP
 ![Top Uses](images/TopUse.png)
 
