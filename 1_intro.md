@@ -33,7 +33,8 @@ Open a **terminal** from the JupyterLab launcher and run:
 
 ```bash
 cd ~/cra-tutorial
-echo "$OPENAI_API_BASE"                       # the managed LLM endpoint
+# the managed LLM endpoint
+echo "$OPENAI_API_BASE"
 kubectl auth can-i list pods -n nrp-training-k8s
 ```
 
