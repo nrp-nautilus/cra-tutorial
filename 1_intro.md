@@ -21,11 +21,27 @@ A quick mental model:
 4. **Managed services** (LLM, Milvus, …) mean you call an API instead of
    running and paying for your own servers.
 
+## Interacting with NRP
+![Top Uses](images/TopUse.png)
+
+The majority of NRP users interact with the cluster using the following three methods.
+- via **Kubernetes**: Directly submit and manage containerized workloads (services and batch jobs) using Kubernetes APIs and tools like `kubectl`.
+- via the **Coder** service: Launch a browser-based VS Code environment connected to cluster resources for interactive development and execution.
+- via NRP deployed **Jupyterhub**: Start a JupyterLab notebook server on the cluster for interactive analysis, prototyping, and teaching workflows.
+
+Today, we will be using two of these services. We will launch a jupyterhub server. From the jupyterhub server, we will interact with kubernetes directly using the hub's terminal.
+
 ## Log in
 
 Open the workspace link from the [README](README.md) and sign in through
 CILogon. The training JupyterHub is the easiest path because `kubectl` and the
 LLM environment variables are already wired up for you.
+
+## A CPU-only session is enough
+
+Everything here — managed LLM inference, RAG, and deploying a JupyterHub with
+Helm — runs on a **CPU-only** session. The spawn-form defaults (1 core / 8 GB)
+are fine; you do **not** need a GPU.
 
 ## Confirm your environment
 
@@ -41,17 +57,17 @@ kubectl auth can-i list pods -n nrp-training-k8s
 You should see the endpoint URL and a `yes`. That's everything the notebook
 needs.
 
-## A CPU-only session is enough
 
-Everything here — managed LLM inference, RAG, and deploying a JupyterHub with
-Helm — runs on a **CPU-only** session. The spawn-form defaults (1 core / 8 GB)
-are fine; you do **not** need a GPU.
 
 ## For Part 3: your namespace
 
 Part 3 deploys a JupyterHub into a namespace reserved for you
 (`nrp-training-000` … `nrp-training-099`) — use the one on the slip you were
 handed. Your session's service account can already deploy there.
+
+
+
+---
 
 **Next:** open [`2_inference.ipynb`](2_inference.ipynb) and run the cells top
 to bottom.
